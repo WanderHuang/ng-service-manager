@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { AntdFormDemoComponent } from './antd-form-demo/antd-form-demo.component';
-import { AntdTableDemoComponent } from './antd-table-demo/antd-table-demo.component';
-import { AntdLayoutDemoComponent } from './antd-layout-demo/antd-layout-demo.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,20 +13,23 @@ import zh from '@angular/common/locales/zh';
 
 registerLocaleData(zh);
 
+import { DemoModule } from './demo/demo.module';
+import { AntdBackgroundComponent } from './antd-background/antd-background.component';
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    DemoModule
   ],
   declarations: [
     AppComponent,
-    AntdLayoutDemoComponent,
-    AntdFormDemoComponent,
-    AntdTableDemoComponent
+    AntdBackgroundComponent
   ],
   bootstrap: [AppComponent],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }]

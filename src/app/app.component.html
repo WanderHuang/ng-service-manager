@@ -1,7 +1,9 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/form">form</a>
-  <a routerLink="/table">table</a>
-  <a routerLink="/layout">layout</a>
-</nav>
-<router-outlet></router-outlet>
+<nz-layout>
+  <nz-header>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" class="header-item">
+      <li nz-menu-item><a routerLink="/demo"><i class="anticon anticon-home"></i>demo</a></li>
+      <li nz-menu-item><a routerLink="/background"><i class="anticon anticon-laptop"></i>background</a></li>
+    </ul>
+  </nz-header>
+  <router-outlet></router-outlet>
+</nz-layout>

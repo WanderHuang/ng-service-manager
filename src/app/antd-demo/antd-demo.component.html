@@ -1,0 +1,18 @@
+<nz-layout>
+  <nz-sider [nzWidth]="200">
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" class="sider-wrap">
+      <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? 'Navigation One' : ''">
+        <a routerLink="/demo/form"><i class="anticon anticon-form"></i>form</a>
+      </li>
+      <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? 'Navigation One' : ''">
+          <a routerLink="/demo/table"><i class="anticon anticon-table"></i>table</a>
+      </li>
+      <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? 'Navigation One' : ''">
+        <a routerLink="/demo/layout"><i class="anticon anticon-layout"></i>layout</a>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout style="padding:0 24px 24px">
+    <router-outlet></router-outlet>
+  </nz-layout>
+</nz-layout>

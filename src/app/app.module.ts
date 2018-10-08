@@ -14,7 +14,8 @@ import zh from '@angular/common/locales/zh';
 registerLocaleData(zh);
 
 import { DemoModule } from './demo/demo.module';
-import { AntdBackgroundComponent } from './antd-background/antd-background.component';
+import { GameModule } from './game/game.module';
+import { BackgroundModule } from './background/background.module';
 
 @NgModule({
   imports: [
@@ -25,11 +26,12 @@ import { AntdBackgroundComponent } from './antd-background/antd-background.compo
     BrowserAnimationsModule,
     HttpClientModule,
     NgZorroAntdModule,
-    DemoModule
+    DemoModule,
+    BackgroundModule,
+    GameModule
   ],
   declarations: [
-    AppComponent,
-    AntdBackgroundComponent
+    AppComponent
   ],
   bootstrap: [AppComponent],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }]

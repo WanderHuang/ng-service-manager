@@ -1,0 +1,12 @@
+<nz-layout>
+  <nz-sider [nzWidth]="200">
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" class="sider-wrap">
+      <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="'Russian Block'">
+        <a routerLink="/game/block"><i class="anticon anticon-form"></i>block</a>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout style="padding:0 24px 24px">
+    <router-outlet></router-outlet>
+  </nz-layout>
+</nz-layout>
